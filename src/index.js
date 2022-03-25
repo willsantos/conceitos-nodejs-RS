@@ -72,7 +72,7 @@ app.post('/todos', checksExistsUserAccount, (request, response) => {
     title,
     done: false,
     deadline: new Date(deadline),
-    cratedAt: new Date(),
+    created_at: new Date(),
   };
 
   user.todos.push(todo);
