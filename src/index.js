@@ -11,6 +11,13 @@ app.use(express.json());
 
 const users = [];
 
+function checksExistsUsername(username){
+  const user = users.find(user => user.username === username);
+  if(!user){
+    return false;
+  }
+  return user;
+}
 function checksExistsUserAccount(request, response, next) {
   const { username } = request.headers;
 
