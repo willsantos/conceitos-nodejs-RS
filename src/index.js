@@ -126,7 +126,7 @@ app.delete('/todos/:id', checksExistsUserAccount, (request, response) => {
 
   user.todos.splice(todo, 1);
 
-  return response.status(200).json({message:'Todo removed successfuly'});
+  return response.status(204).json({message:'Todo removed successfuly'});
 });
 
 module.exports = app;
